@@ -1,0 +1,110 @@
+:root {
+    font-size: 16px;
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 3px;
+}
+
+/* Fonts */
+@font-face {
+    font-family: 'Digital-7';
+    src: url('../fonts/digital-7.ttf');
+}
+
+@font-face {
+    font-family: 'Digital-7-Mono';
+    src: url('../fonts/digital-7\ \(mono\).ttf');
+}
+
+@font-face {
+    font-family: 'Digital-7-Mono-Italic';
+    src: url('../fonts/digital-7\ \(mono\ italic\).ttf');
+}
+
+@font-face {
+    font-family: 'Digital-7-Italic';
+    src: url('../fonts/digital-7\ \(italic\).ttf');
+}
+
+.disabled {
+    opacity: 0.2;
+    cursor: default;
+}
+
+img {
+    display: block;
+    max-inline-size: 100%;
+}
+
+body {
+    background-color: hsl(0, 30%, 50%);
+    color: hsl(0, 0%, 90%);
+    position: relative;
+    block-size: 100vh;
+    font-family: 'Digital-7';
+}
+
+section#clock {
+    block-size: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+section#clock h1 {
+    font-size: clamp(1rem, 5vw, 2rem);
+    border-bottom: 1px solid hsl(0, 0%, 90%);
+    padding: 0.3rem;
+}
+
+section#clock > div.stopwatch-screen,
+section#clock > div.stopwatch-btns {
+    inline-size: 90%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: hsla(93, 30%, 93%, 0.7);
+    font-size: clamp(2.5rem, 5vw, 2rem);
+    font-weight: 900;
+    color:hsl(0, 30%, 50%);
+    border-radius: 10px;
+}
+
+section#clock > div.stopwatch-screen {
+    block-size: 100px;
+    max-inline-size: 300px;
+}
+
+section#clock > div.stopwatch-btns {
+    inline-size: 250px;
+}
+
+button {
+    appearance: none;
+    border: none;
+    padding: .5rem;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0.2rem 5px rgb(104, 104, 104);
+    text-align: center;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+div.stopwatch-btns button > svg {
+    width: 20px;
+    height: 20px;
+    fill: hsl(0, 30%, 50%);
+}
